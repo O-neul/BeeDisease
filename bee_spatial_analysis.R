@@ -1,3 +1,4 @@
+setwd("C:/.Soyeon/BeeDisease")
 setwd("C:/Users/haa/Downloads/BeeDisease/BeeDisease")
 
 library(dplyr)
@@ -323,7 +324,7 @@ make_X_from_model <- function(fit, newdata) {
 # -----------------------------
 # 1) 일조량 상위 집단 정의
 # -----------------------------
-q_top  <- 0.90  # 상위 10% 컷 (필요시 조정)
+q_top  <- 0.80  # 상위 20% 컷 (필요시 조정)
 thr_sun <- quantile(both$sum_sun, q_top, na.rm = TRUE)
 message(sprintf("[INFO] sum_sun %.0f%% 컷오프 = %.3f", (1 - q_top) * 100, thr_sun))
 
