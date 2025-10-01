@@ -4,8 +4,11 @@ bee_env/
 공간분석.zip
 paper_junsik.pdf
 SARCAR.R
-bee_spatial_analysis.R
 data/processed/6_6km_nearby_cer_coords.csv
 data/processed/6_6km_nearby_mel_coords.csv
+<<<<<<< HEAD
 이변량조건부자기회귀모형을이용한강력범죄자료분석.pdf
 paper_junsik.pdf
+=======
+이변량조건부자기회귀모형을이용한강력범죄자료분석.pdf
+>>>>>>> 96b0820758bbcf036f0cb05428b913449c4c9310
