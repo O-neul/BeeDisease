@@ -1,0 +1,6 @@
+시군구 수: 252
+총 발생두수 합계: 23,909
+기상 complete rows: 222
+토지피복 complete rows: 29
+기후+토지피복 complete rows: 22
+response transform: raw

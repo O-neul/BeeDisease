@@ -1,0 +1,15 @@
+\begin{table}[t]
+\caption{Spatial diagnostics and goodness-of-fit comparison between OLS and CAR models.}
+\label{tb:spatialdiag}
+\centering
+\begin{tabular}{lrrrrrrrrrrrrrrrr}
+\hline
+\textbf{model} & \textbf{response} & \textbf{predictors} & \textbf{n} & \textbf{moran\_y\_I} & \textbf{moran\_y\_p} & \textbf{moran\_ols\_resid\_I} & \textbf{moran\_ols\_resid\_p} & \textbf{moran\_car\_resid\_I} & \textbf{moran\_car\_resid\_p} & \textbf{lambda} & \textbf{lr\_stat} & \textbf{lr\_p} & \textbf{logLik\_ols} & \textbf{logLik\_car} & \textbf{AIC\_ols} & \textbf{AIC\_car}
+\\
+\hline
+climate\_only & response & sum\_sun, sum\_rain, mean\_temp, ratio\_sun & 222.0000 & 0.1831 & 0.0000 & 0.0143 & 0.3214 & -0.0938 & 0.9854 & 0.0558 & 1.1550 & 0.2825 & -1522.8033 & -1522.2258 & 3057.6066 & 3058.4516 \\
+landcover\_only & response & forest, agri, urban, water & 29.0000 & -0.0298 & 0.3332 & -0.0713 & 0.8560 & -0.0289 & 0.4208 & -0.0272 & 0.0364 & 0.8486 & 8.5523 & 8.5705 & -5.1045 & -3.1410 \\
+final\_combined & response & sum\_sun, sum\_rain, water & 22.0000 & -0.0397 & 0.3446 & -0.2767 & 0.9860 & -0.1649 & 0.8649 & -0.2163 & 1.6678 & 0.1966 & 5.9624 & 6.7963 & -3.9247 & -3.5925 \\
+\hline
+\end{tabular}
+\end{table}

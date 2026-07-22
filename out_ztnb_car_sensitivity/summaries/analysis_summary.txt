@@ -1,0 +1,23 @@
+SBV zero-truncated negative-binomial CAR sensitivity analysis
+
+Analysis n = 1250
+Minimum SBV count = 1
+Maximum SBV count = 500
+Backend = rstan
+Chains = 4
+Iterations = 2000
+Warmup = 1000
+adapt_delta = 0.99
+max_treedepth = 15
+
+Models:
+- climate_both: mean_temp_z + sum_sun_z + ratio_sun_z + sum_rain_z
+- climate_sum_only: mean_temp_z + sum_sun_z + sum_rain_z
+- climate_ratio_only: mean_temp_z + ratio_sun_z + sum_rain_z
+- landcover: forest_z + agri_z + water_z
+
+Interpretation population:
+This analysis concerns SBV count magnitude among occurrence-recorded observations (Y > 0), not the probability of occurrence.
+
+Sun robustness conclusion:
+sum_sun 및 ratio_sun 단독 모형 모두에서 종 상호작용의 95% 신용구간이 0을 포함하였다. 따라서 고일조 조건의 종별 차이를 핵심 결론으로 유지할 근거가 강건하지 않다.

@@ -1,0 +1,143 @@
+=== Combined CAR model summary ===
+
+Call: spatialreg::spautolm(formula = 발생두수 ~ (forest + agri + 
+    water + mean_temp + sum_sun + ratio_sun + sum_rain) * species, 
+    data = dat, listw = g$listw, family = "CAR", zero.policy = TRUE)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-132.35930   -9.16131   -5.64802   -0.67469  367.00782 
+
+Regions with no neighbours included:
+ 7 39 41 98 105 115 127 141 153 220 228 279 283 296 302 326 354 376 390 391 399 404 406 432 434 436 457 508 530 550 556 573 591 609 611 613 614 618 622 630 631 643 654 661 663 669 674 676 699 704 712 717 732 740 750 751 770 777 780 782 783 790 795 796 814 815 818 819 827 834 840 854 882 889 892 907 921 946 962 987 988 992 994 997 999 1010 1018 1025 1032 1053 1070 1075 1076 1084 1087 1088 1093 1097 1099 1101 1102 1108 1115 1129 1131 1136 1137 1142 1147 1148 1154 1156 1162 1163 1166 1171 1173 1176 1177 1178 1186 1189 1199 1200 1203 1204 1205 1206 1207 1210 1214 1215 1216 1225 1229 1230 1232 1234 1235 1236 1237 1241 1242 1243 1247 1250 
+
+Coefficients: 
+                             Estimate Std. Error z value  Pr(>|z|)
+(Intercept)                -35.765730  43.027433 -0.8312 0.4058432
+forest                      29.888462  27.709626  1.0786 0.2807523
+agri                        30.297468  34.718764  0.8727 0.3828517
+water                      125.212398  76.703595  1.6324 0.1025913
+mean_temp                    1.212226   1.264345  0.9588 0.3376705
+sum_sun                     -0.322135   0.423165 -0.7613 0.4465064
+ratio_sun                    1.194318   1.829535  0.6528 0.5138862
+sum_rain                    -0.026946   0.067180 -0.4011 0.6883439
+speciesmellifera           314.100012  95.358158  3.2939 0.0009881
+forest:speciesmellifera     51.177159  47.138383  1.0857 0.2776210
+agri:speciesmellifera      105.173948  60.792776  1.7300 0.0836231
+water:speciesmellifera     213.752827 249.306532  0.8574 0.3912296
+mean_temp:speciesmellifera  -1.668299   3.100151 -0.5381 0.5904840
+sum_sun:speciesmellifera     5.093069   1.324309  3.8458 0.0001201
+ratio_sun:speciesmellifera -26.101087   5.635261 -4.6317 3.626e-06
+sum_rain:speciesmellifera   -0.813521   0.159077 -5.1140 3.154e-07
+
+Lambda: 0.036778 LR test value: 26.113 p-value: 3.2206e-07 
+Numerical Hessian standard error of lambda: 0.0028645 
+
+Log likelihood: -6363.49 
+ML residual variance (sigma squared): 1534.2, (sigma: 39.169)
+Number of observations: 1250 
+Number of parameters estimated: 18 
+AIC: 12763
+
+
+=== Variables ===
+[1] "forest"    "agri"      "water"     "mean_temp" "sum_sun"   "ratio_sun"
+[7] "sum_rain" 
+
+=== Marginal effects ===
+$forest
+$forest$cerana
+[1] 29.88846
+
+$forest$mellifera
+[1] 81.06562
+
+$forest$species_difference
+[1] 51.17716
+
+
+$agri
+$agri$cerana
+[1] 30.29747
+
+$agri$mellifera
+[1] 135.4714
+
+$agri$species_difference
+[1] 105.1739
+
+
+$water
+$water$cerana
+[1] 125.2124
+
+$water$mellifera
+[1] 338.9652
+
+$water$species_difference
+[1] 213.7528
+
+
+$mean_temp
+$mean_temp$cerana
+[1] 1.212226
+
+$mean_temp$mellifera
+[1] -0.4560731
+
+$mean_temp$species_difference
+[1] -1.668299
+
+
+$sum_sun
+$sum_sun$cerana
+[1] -0.3221351
+
+$sum_sun$mellifera
+[1] 4.770934
+
+$sum_sun$species_difference
+[1] 5.093069
+
+
+$ratio_sun
+$ratio_sun$cerana
+[1] 1.194318
+
+$ratio_sun$mellifera
+[1] -24.90677
+
+$ratio_sun$species_difference
+[1] -26.10109
+
+
+$sum_rain
+$sum_rain$cerana
+[1] -0.02694616
+
+$sum_rain$mellifera
+[1] -0.8404669
+
+$sum_rain$species_difference
+[1] -0.8135207
+
+
+
+=== Model diagnostics ===
+            n lambda.lambda           AIC        logLik 
+ 1.250000e+03  3.677768e-02  1.276298e+04 -6.363490e+03 
+
+=== Residual Moran test ===
+
+	Moran I test under randomisation
+
+data:  residuals(res_combined$fit)  
+weights: res_combined$listw  
+n reduced by no-neighbour observations  
+
+Moran I statistic standard deviate = 2.617, p-value = 0.004435
+alternative hypothesis: greater
+sample estimates:
+Moran I statistic       Expectation          Variance 
+     0.0378938773     -0.0009066183      0.0002198154 
+

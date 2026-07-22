@@ -264,8 +264,7 @@ summary(sar_both)
 
 # CAR (합동)
 car_both <- spautolm(
-  발생두수 ~ (prefer_count +
-            mean_temp + sum_sun + ratio_sun + sum_rain)*species,
+  발생두수 ~ (mean_temp + sum_sun + ratio_sun + sum_rain)*species,
   data = both, listw = listw_sym_both, family = "CAR", zero.policy = TRUE
 )
 summary(car_both)

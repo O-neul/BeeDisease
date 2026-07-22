@@ -1,0 +1,39 @@
+ Family: negbinomial 
+  Links: mu = log 
+Formula: sbv_count | trunc(lb = 0) ~ species * (forest_z + agri_z + water_z) + car(W_car, gr = spatial_id, type = "escar") 
+   Data: dat_zt (Number of observations: 1250) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Correlation Structures:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+car       0.80      0.03     0.72     0.86 1.00      867     1946
+sdcar     1.82      0.11     1.60     2.05 1.02      338      733
+
+Regression Coefficients:
+                          Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept                     1.66      0.06     1.53     1.78 1.01      346
+speciesmellifera              1.41      0.15     1.11     1.70 1.01      861
+forest_z                      0.23      0.19    -0.14     0.60 1.00      949
+agri_z                        0.04      0.17    -0.29     0.36 1.00      985
+water_z                       0.27      0.07     0.13     0.42 1.01      716
+speciesmellifera:forest_z     0.15      0.26    -0.37     0.67 1.00     1799
+speciesmellifera:agri_z       0.25      0.25    -0.24     0.75 1.00     1531
+speciesmellifera:water_z     -0.20      0.23    -0.66     0.25 1.01     1224
+                          Tail_ESS
+Intercept                     1232
+speciesmellifera              1869
+forest_z                      1560
+agri_z                        1967
+water_z                       1209
+speciesmellifera:forest_z     2638
+speciesmellifera:agri_z       2452
+speciesmellifera:water_z      1810
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+shape     2.34      0.33     1.81     3.11 1.01      374      687
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).

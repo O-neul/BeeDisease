@@ -1,0 +1,2 @@
+"comparison","n","pearson_r","pearson_p","spearman_rho","spearman_p","pairwise_vif_approx"
+"sum_sun vs ratio_sun",1250,0.988025027040192,0,0.983270138453277,0,42.0052536149819

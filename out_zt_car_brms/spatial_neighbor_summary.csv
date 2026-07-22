@@ -1,0 +1,2 @@
+"n_observations","distance_band_m","isolated_under_distance_band","nearest_neighbor_fallback_links","min_neighbors_before_fallback","median_neighbors_before_fallback","max_neighbors_before_fallback","min_neighbors_after_fallback","median_neighbors_after_fallback","max_neighbors_after_fallback"
+1250,6000,146,146,0,5,28,1,5,28

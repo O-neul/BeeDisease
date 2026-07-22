@@ -1,0 +1,55 @@
+ Family: negbinomial 
+  Links: mu = log 
+Formula: sbv_count | trunc(lb = 0) ~ species * (mean_temp_z + sum_sun_z + ratio_sun_z + sum_rain_z + forest_z + agri_z + water_z) + car(W_car, gr = spatial_id, type = "escar") 
+   Data: dat_zt (Number of observations: 1250) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Correlation Structures:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+car       0.79      0.04     0.71     0.86 1.00      848     1838
+sdcar     1.81      0.12     1.58     2.05 1.00      407      888
+
+Regression Coefficients:
+                             Estimate Est.Error l-95% CI u-95% CI Rhat
+Intercept                        1.66      0.06     1.54     1.79 1.00
+speciesmellifera                 1.44      0.16     1.13     1.77 1.00
+mean_temp_z                      0.07      0.07    -0.08     0.21 1.01
+sum_sun_z                       -0.01      0.45    -0.87     0.86 1.01
+ratio_sun_z                     -0.09      0.44    -0.93     0.77 1.01
+sum_rain_z                      -0.01      0.06    -0.13     0.10 1.00
+forest_z                         0.20      0.19    -0.18     0.57 1.00
+agri_z                           0.00      0.17    -0.34     0.34 1.00
+water_z                          0.26      0.07     0.11     0.40 1.00
+speciesmellifera:mean_temp_z    -0.42      0.18    -0.77    -0.07 1.00
+speciesmellifera:sum_sun_z       2.29      1.36    -0.37     4.95 1.00
+speciesmellifera:ratio_sun_z    -2.34      1.31    -4.93     0.23 1.00
+speciesmellifera:sum_rain_z     -0.35      0.13    -0.60    -0.10 1.00
+speciesmellifera:forest_z        0.15      0.26    -0.34     0.65 1.00
+speciesmellifera:agri_z          0.42      0.26    -0.08     0.91 1.00
+speciesmellifera:water_z         0.14      0.24    -0.33     0.62 1.00
+                             Bulk_ESS Tail_ESS
+Intercept                         784     1344
+speciesmellifera                 1668     2636
+mean_temp_z                      1272     2383
+sum_sun_z                        1262     1818
+ratio_sun_z                      1299     2013
+sum_rain_z                       1278     1674
+forest_z                         1415     2015
+agri_z                           1424     2320
+water_z                          1510     1970
+speciesmellifera:mean_temp_z     2321     2967
+speciesmellifera:sum_sun_z       2267     2498
+speciesmellifera:ratio_sun_z     2367     2624
+speciesmellifera:sum_rain_z      2390     2667
+speciesmellifera:forest_z        3583     3503
+speciesmellifera:agri_z          2749     2977
+speciesmellifera:water_z         1905     2603
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+shape     2.35      0.35     1.79     3.17 1.00      474     1141
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).

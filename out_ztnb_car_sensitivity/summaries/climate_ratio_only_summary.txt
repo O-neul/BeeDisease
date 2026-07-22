@@ -1,0 +1,39 @@
+ Family: negbinomial 
+  Links: mu = log 
+Formula: sbv_count | trunc(lb = 0) ~ species * (mean_temp_z + ratio_sun_z + sum_rain_z) + car(W_car, gr = spatial_id, type = "escar") 
+   Data: dat_zt (Number of observations: 1250) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Correlation Structures:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+car       0.81      0.03     0.74     0.87 1.00      657     1398
+sdcar     1.81      0.12     1.59     2.04 1.01      277      550
+
+Regression Coefficients:
+                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept                        1.68      0.06     1.56     1.81 1.01      418
+speciesmellifera                 1.42      0.15     1.13     1.72 1.00      600
+mean_temp_z                      0.06      0.05    -0.05     0.16 1.00      588
+ratio_sun_z                     -0.09      0.05    -0.19     0.02 1.01      666
+sum_rain_z                       0.01      0.05    -0.09     0.12 1.01      489
+speciesmellifera:mean_temp_z    -0.19      0.16    -0.50     0.11 1.00      753
+speciesmellifera:ratio_sun_z    -0.08      0.17    -0.41     0.27 1.01      548
+speciesmellifera:sum_rain_z     -0.31      0.12    -0.54    -0.08 1.00     1053
+                             Tail_ESS
+Intercept                         778
+speciesmellifera                 1309
+mean_temp_z                      1207
+ratio_sun_z                      1476
+sum_rain_z                        914
+speciesmellifera:mean_temp_z     1527
+speciesmellifera:ratio_sun_z     1338
+speciesmellifera:sum_rain_z      2256
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+shape     2.34      0.32     1.82     3.06 1.01      314      791
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
